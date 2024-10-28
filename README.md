@@ -1,6 +1,3 @@
-Thanks for providing all that information! Here’s a draft for your `README.md` based on your answers:
-
-```markdown
 # Qwaderton/Styles
 
 **Qwaderton/Styles** is a simple component library designed to enhance your website with ready-to-use styles. Think of it as a simpler and prettier alternative to Bootstrap, providing beautiful design elements right out of the box.
@@ -73,6 +70,3 @@ This project is licensed under the [BSD 4-Clause License](LICENSE).
 For any questions, feel free to join our communities:
 - [Discord Server](https://discord.gg/qtjrKnCk8y)
 - [Telegram Group](https://t.me/+1VzhavR1KM40NjE6)
-```
-
-Feel free to modify any sections or let me know if there’s anything specific you’d like to change or add!
