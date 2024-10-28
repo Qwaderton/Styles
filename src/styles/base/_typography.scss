@@ -1,0 +1,64 @@
+// Typography styles for headings and paragraphs
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font;
+  color: $color-black;
+  line-height: 1.2; // Tighter line height for headings
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin: 0.75rem 0;
+}
+
+// Paragraph styles
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: $line-height-base;
+  color: $color-gray-dark;
+}
+
+// Styling for small text
+small {
+  font-size: 0.875rem;
+  color: $color-gray-dark;
+}
+
+// Line break and horizontal rule styles
+br {
+  // margin: 1rem 0;
+  display: block;
+}
+
+hr {
+  border: 0;
+  outline: 1px solid $color-black; // Custom horizontal rule style
+  margin: $spacing-small;
+}
+
+// Links styling
+a {
+  color: inherit; // Inherits current text color
+  transition: color $transition; // Smooth color transition on hover
+  &:hover {
+    color: $color-gray-dark;
+  }
+}
+
+// Removing default list styling
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,91 @@
+// Default text inputs
+input[type=text], input[type=email], input[type=password] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: $primary-font;
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: $border-radius - calc($border-radius / 2);
+  border: 2px solid $color-black;
+  text-align: center;
+  background-color: $color-white;
+  transition: box-shadow $transition;
+  &:focus {
+    outline: none; 
+    box-shadow: $shadow-small; 
+  }
+  // Moves text to the left if something is entered
+  &:not(:placeholder-shown) {
+    text-align: left;
+  }
+}
+
+// ------------------------
+// Form Elements: Select, Radio, and Checkbox
+// ------------------------
+
+// General Styles for Form Inputs
+select, input[type="radio"], input[type="checkbox"] {
+  font-family: $primary-font;
+  font-size: 1rem;
+  color: $color-black;
+  padding: 8px 12px;
+  margin: 10px 0;
+  border-radius: $border-radius - calc($border-radius / 2);
+  border: 2px solid $color-gray-light;
+  transition: border-color $transition, box-shadow $transition;
+  outline: none; // Remove default browser outline
+}
+
+// Hover and Focus States
+select:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
+  border-color: $color-black; // Darken border on focus
+  box-shadow: $shadow-small; // Custom focus ring
+}
+
+// Select Dropdown
+select {
+  width: 100%; // Ensure dropdown fills the width of the container
+  background-color: $color-white;
+  appearance: none; // Remove default dropdown arrow (we'll customize it)
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-black;
+  }
+  
+  // Add custom arrow
+  background-image: $select-icon;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
+}
+
+
+// Radio Buttons
+input[type="radio"] {
+  width: 18px; // Set size for radio button
+  height: 18px;
+  margin-right: 8px; // Space between radio and label
+  cursor: pointer;
+  accent-color: $color-black; // Customize color for radio button
+}
+
+input[type="radio"]:checked {
+  border-color: $color-black; // Dark border for checked state
+}
+
+
+// Checkboxes
+input[type="checkbox"] {
+  width: 20px; // Set size for checkbox
+  height: 20px;
+  margin-right: 8px; // Space between checkbox and label
+  cursor: pointer;
+  accent-color: $color-black; // Customize color for checkbox
+}
+
+input[type="checkbox"]:checked {
+  border-color: $color-black; // Dark border for checked state
+}

@@ -1,0 +1,68 @@
+// Font families used throughout the site
+$primary-font: "Raleway", sans-serif;
+$secondary-font: "Urbanist", Arial, sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$line-height-base: 1.6; // Line height for readability
+$font-size-small: 0.875rem;
+$font-size-base: 1.375rem; // Base font size for body text
+$font-size-large: 1.75rem;
+$heading-font-size: 2.5rem; // Main heading size
+
+// TODO
+$color-black: #1f1f1f;
+$color-white: #efefef;
+$color-gray-light: #e8e8e8;
+$color-gray: #adacad;
+$color-gray-dark: #454545;
+$color-danger: #df0c0c; // Red color for error/danger elements
+$color-primary: #0070f3; // Main brand color
+$color-secondary: #ff4081; // Accent color
+
+$color-background: #f8f9fa; // General background color
+$color-text-primary: $color-black; // Primary text color
+$color-text-secondary: $color-gray-dark; // Secondary text color
+
+$color-primary-hover: darken($color-primary, 10%); // Hover effect
+$color-secondary-hover: lighten($color-secondary, 10%);
+
+$spacing-xsmall: 8px;
+$spacing-small: 16px;
+$spacing-medum: 24px;
+$spacing-large: 32px;
+$spacing-xlarge: 48px;
+
+$container-padding: $spacing-medum;
+
+$header-height: 88px;
+$header-logo-padding: $spacing-small;
+$sidebar-width: 250px; // Fixed width for the sidebar
+
+$button-padding: 12px 24px;
+$button-border-radius: 4px;
+$button-font-size: 1rem;
+$border-radius: 32px;
+
+$shadow-small: 0 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.1);
+$shadow-large: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+$grid-gap: 16px;
+$content-max-width: 1200px; // Max width for main content area
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
+$hover-opacity: 0.85;
+$focus-outline-color: $color-primary;
+$transition: 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77); // Smooth transition easing
+
+$widths: 20, 25, 33, 40, 50, 60, 66, 75, 80, 100; // Percentage widths for columns
+
+$card-translate: -6px; // Y-axis translate for card hover effect
+$card-image-max-height: 300px; // Max height for images inside a card
+
+$select-icon: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"%3E%3Cpath d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/%3E%3C/svg%3E');

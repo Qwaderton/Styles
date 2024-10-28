@@ -1,0 +1,42 @@
+// Main container of the grid
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+// Basic column class with padding variable
+.col {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  padding: $spacing-xsmall;
+}
+
+// Generate classes for specifying the percentage of column width
+@each $width in $widths {
+  .col-#{$width} {
+    flex: 0 0 #{$width};
+  }
+}
+
+// Full-width column class
+.col-100, .col {
+  flex: 0 0 100%;
+}
+
+// Alignment for columns using float
+.col {
+  &.float-left {
+    float: left;
+  }
+
+  &.float-right {
+    float: right;
+  }
+
+  &.float-center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}

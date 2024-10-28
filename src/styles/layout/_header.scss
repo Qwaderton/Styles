@@ -1,0 +1,57 @@
+// Calculation of logo height
+$logo-height: calc($header-height - #{$header-logo-padding * 2});
+
+// Header section with fixed positioning and drop shadow
+header {
+    height: $header-height;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-gray-light;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Subtle shadow effect
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; // Ensures header stays on top of other elements
+    overflow-y: hidden; // Avoid scrolling in the header
+  
+    .logo {
+      height: $header-height; // Ensures .logo container matches header height
+
+      img {
+        height: $logo-height; // Dynamically set image height based on header and padding
+        margin: $header-logo-padding; // Consistent margin around the logo
+        border-radius: 0; // Explicitly disable rounding
+      }
+    }
+
+  
+    .container {
+      display: flex;
+      justify-content: space-between; // Space between logo and navigation
+      align-items: center; // Vertically center the items
+      height: 100%; // Full header height
+      padding: 0;
+    }
+  
+    // Navigation menu styles
+    nav {
+      display: flex;
+      gap: 45px; // Space between menu items
+    }
+  
+    nav a {
+      text-decoration: none;
+      font-family: $secondary-font;
+      font-size: 1rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 2px;
+      background-image: linear-gradient($color-black, $color-black); // Gradient for hover underline
+      background-size: 0% 1px; // Initially hidden underline
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      transition: background-size $transition; // Smooth expand of underline on hover
+      &:hover {
+          background-size: 100% 1px; // Full underline on hover
+      }
+    }
+  }
