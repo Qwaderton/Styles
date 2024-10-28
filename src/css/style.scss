@@ -117,107 +117,12 @@ img {
 // ------------------------
 // Header
 // ------------------------
-// Header section with fixed positioning and drop shadow
-header {
-  height: $header-height;
-  background-color: $color-white;
-  border-bottom: 1px solid $color-gray-light;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Subtle shadow effect
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000; // Ensures header stays on top of other elements
-  overflow-y: hidden; // Avoid scrolling in the header
 
-  .logo {
-    height: $header-height; // Logo height same as header height
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between; // Space between logo and navigation
-    align-items: center; // Vertically center the items
-    height: 100%; // Full header height
-  }
-
-  // Navigation menu styles
-  nav {
-    display: flex;
-    gap: 45px; // Space between menu items
-  }
-
-  nav a {
-    font-family: $secondary-font;
-    font-size: 1rem;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 2px;
-    background-image: linear-gradient($color-black, $color-black); // Gradient for hover underline
-    background-size: 0% 1px; // Initially hidden underline
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    transition: background-size $transition; // Smooth expand of underline on hover
-    &:hover {
-        background-size: 100% 1px; // Full underline on hover
-    }
-  }
-
-  .logo a img {
-    height: $header-height; // Ensure logo image fills header height
-    border-radius: 0; // Don't round logo
-  }
-}
 
 // ------------------------
 // Typography
 // ------------------------
-// Typography styles for headings and paragraphs
-h1, h2, h3, h4, h5, h6 {
-  font-family: $primary-font;
-  color: $color-black;
-  line-height: 1.2; // Tighter line height for headings
-}
 
-h1 {
-  font-size: 2.5rem;
-  margin: 1rem 0;
-}
-
-h2 {
-  font-size: 2rem;
-  margin: 1rem 0;
-}
-
-h3 {
-  font-size: 1.75rem;
-  margin: 0.75rem 0;
-}
-
-// Paragraph styles
-p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: $line-height-base;
-  color: $color-gray-dark;
-}
-
-// Styling for small text
-small {
-  font-size: 0.875rem;
-  color: $color-gray-dark;
-}
-
-// Line break and horizontal rule styles
-br {
-  // margin: 1rem 0;
-  display: block;
-}
-
-hr {
-  border: 0;
-  outline: 1px solid $color-black; // Custom horizontal rule style
-  margin: $container-padding;
-}
 
 // ------------------------
 // Grid System
@@ -245,28 +150,7 @@ hr {
 // ------------------------
 // Footer
 // ------------------------
-// Footer styles with centered text
-footer {
-  background-color: $color-black;
-  color: $color-white;
-  padding: 40px 0;
-  text-align: center;
 
-  a {
-    color: $color-white;
-    text-decoration: underline;
-    transition: color $transition;
-
-    &:hover {
-      color: $color-gray-light;
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-    color: $color-gray-light;
-  }
-}
 
 // ------------------------
 // Layout
