@@ -1,5 +1,8 @@
 # Qwaderton/Styles
 
+> [!WARNING]
+> This project is at an early stage of development. We are not responsible for any difficulties you may encounter.
+
 **Qwaderton/Styles** is a simple component library designed to enhance your website with ready-to-use styles. Think of it as a simpler and prettier alternative to Bootstrap, providing beautiful design elements right out of the box.
 
 ## Table of Contents
@@ -13,7 +16,7 @@
 
 ## Installation
 
-To get started, download the library from our Issues page or directly via **Code -> Download ZIP** to obtain the latest version (please note it may not be stable). 
+To get started, download the library from our Releases page or directly via **Code -> Download ZIP** to obtain the latest version (please note it may not be stable). 
 
 1. Extract the downloaded archive.
 2. Move the `src` folder to your project directory. 
