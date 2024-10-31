@@ -13,7 +13,7 @@ input[type=text], input[type=email], input[type=password] {
   transition: box-shadow $transition;
   &:focus {
     outline: none; 
-    box-shadow: $shadow-small; 
+    box-shadow: $shadow-outline; 
   }
   // Moves text to the left if something is entered
   &:not(:placeholder-shown) {
@@ -50,9 +50,13 @@ select {
   background-color: $color-white;
   appearance: none; // Remove default dropdown arrow (we'll customize it)
   cursor: pointer;
+  transition: all $transition;
 
   &:hover {
     border-color: $color-black;
+  }
+  &:focus {
+    box-shadow: $shadow-outline;
   }
   
   // Add custom arrow

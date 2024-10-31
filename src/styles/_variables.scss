@@ -12,30 +12,39 @@ $font-size-base: 1.375rem; // Base font size for body text
 $font-size-large: 1.75rem;
 $heading-font-size: 2.5rem; // Main heading size
 
-// TODO
+// Basic colors
+$color-primary: #0070f3; // The main color of the brand
 $color-black: #1f1f1f;
 $color-white: #efefef;
-$color-gray-light: #e8e8e8;
-$color-gray: #adacad;
-$color-gray-dark: #454545;
-$color-danger: #df0c0c; // Red color for error/danger elements
-$color-primary: #0070f3; // Main brand color
-$color-secondary: #ff4081; // Accent color
 
-$color-background: #f8f9fa; // General background color
-$color-text-primary: $color-black; // Primary text color
-$color-text-secondary: $color-gray-dark; // Secondary text color
+// Functions for creating shades
+@function lighten-color($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
 
-$color-primary-hover: darken($color-primary, 10%); // Hover effect
-$color-secondary-hover: lighten($color-secondary, 10%);
+@function darken-color($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
 
-$spacing-xsmall: 8px;
-$spacing-small: 16px;
-$spacing-medum: 24px;
-$spacing-large: 32px;
-$spacing-xlarge: 48px;
+// Color Generation
+$color-gray-light: darken-color($color-white, 3%);
+$color-gray: lighten-color($color-black, 60%);
+$color-gray-dark: lighten-color($color-black, 20%);
 
-$container-padding: $spacing-medum;
+$color-danger: adjust-hue($color-primary, 180deg); // The opposite color
+$color-secondary: adjust-hue($color-primary, 90deg); // Additional color
+
+$color-background: lighten-color($color-white, 5%);
+$color-text-primary: $color-black;
+$color-text-secondary: $color-gray-dark;
+
+$spacing-xsmall: 7px;
+$spacing-small: 17px;
+$spacing-medium: 23px;
+$spacing-large: 33px;
+$spacing-xlarge: 52px;
+
+$container-padding: $spacing-medium;
 
 $header-height: 88px;
 $header-logo-padding: $spacing-small;
@@ -49,12 +58,16 @@ $border-radius: 32px;
 $shadow-small: 0 4px 12px rgba(0, 0, 0, 0.05);
 $shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.1);
 $shadow-large: 0px 8px 16px rgba(0, 0, 0, 0.2);
+$shadow-outline: 0 0 0 4px rgba(0, 0, 0, 0.1);
 
-$grid-gap: 16px;
+$grid-gap: $spacing-small;
 $content-max-width: 1200px; // Max width for main content area
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
+
+// To remove
+// $main-gap: $spacing-medium;
 
 $hover-opacity: 0.85;
 $focus-outline-color: $color-primary;
@@ -64,5 +77,7 @@ $widths: 20, 25, 33, 40, 50, 60, 66, 75, 80, 100; // Percentage widths for colum
 
 $card-translate: -6px; // Y-axis translate for card hover effect
 $card-image-max-height: 300px; // Max height for images inside a card
+$card-min-width: 250px;
+$card-elements-gap: 12px;
 
 $select-icon: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"%3E%3Cpath d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/%3E%3C/svg%3E');

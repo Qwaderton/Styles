@@ -1,0 +1,79 @@
+// Table wrapper for responsive overflow
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: $spacing-large;
+  box-shadow: $shadow-small;
+  border-radius: math.div($border-radius, 2);
+
+  // Base table styling
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: $primary-font;
+    font-size: $font-size-base;
+    color: $color-text-primary;
+    background-color: $color-white;
+    box-shadow: $shadow-small;
+
+    // Table header styling
+    thead {
+      background-color: $color-black;
+      color: $color-white;
+      font-weight: $font-weight-bold;
+      font-size: 1rem;
+      text-align: left;
+
+      th {
+        padding: $spacing-small;
+        font-size: $font-size-small;
+      }
+    }
+
+    // Table body styling
+    tbody {
+      tr {
+        transition: $transition;
+        border-bottom: 1px solid $color-gray;
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: $shadow-medium;
+        }
+        &:last-child {
+          border: 0;
+        }
+      }
+
+      td {
+        padding: $spacing-small $spacing-medium;
+        font-size: $font-size-small;
+        line-height: $line-height-base;
+        text-align: left;
+        
+
+        // Style for links inside cells
+        a {
+          color: $color-primary;
+          text-decoration: underline;
+
+          &:hover {
+            // To remove
+            // color: $color-primary-hover
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    // Table footer styling (if used)
+    tfoot {
+      td {
+        padding: $spacing-small $spacing-medium;
+        background-color: $color-gray-light;
+        font-weight: $font-weight-regular;
+        color: $color-text-secondary;
+        border-top: 2px solid $color-gray-dark;
+      }
+    }
+  }
+}

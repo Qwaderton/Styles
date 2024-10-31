@@ -6,35 +6,45 @@
   padding: 20px;
   box-shadow: $shadow-small; // Regular shadow for default cards
   transition: box-shadow $transition, transform $transition;
+  min-width: $card-min-width;
 
   &:hover {
     box-shadow: $shadow-medium; // Hover effect with subtle lift
     transform: translateY($card-translate);
   }
 
-  .card-img {
-    margin-bottom: 14px;
+  .head {
+    margin-bottom: $card-elements-gap;
     // For images inside cards
     & img {
-      max-width: 100%; // Ensures images don't overflow the card
+      width: 100%; // Ensures images don't overflow the card
       height: auto; // Maintain aspect ratio for images within cards
       max-height: $card-image-max-height; // Height limit
       object-fit: cover; // Ensures the image fills the area and gets cropped if necessary
+      border-radius: calc($border-radius / 2);
     }
     & img.contain {
       object-fit: contain; // Keeps the whole image visible within the card
     }
   }
-  .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 2px;
-  }
-  .card-content {
-    font-size: 1rem;
-    color: $color-gray-dark;
-  }
-  .card-actions {
-    margin-top: 12px;
+  .body {
+    // To remove
+    // .title {
+    //   font-size: 1.5rem;
+    //   margin-bottom: 2px;
+    // }
+    // .content {
+    //   font-size: 1rem;
+    //   color: $color-gray-dark;
+    // }
+    .actions {
+      margin-top: $card-elements-gap;
+      display: flex;
+      gap: $spacing-xsmall;
+      & .button {
+        border-radius: calc($border-radius / 2);
+      }
+    }
   }
   * {
     margin: 0;

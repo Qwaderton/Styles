@@ -1,68 +1,71 @@
-button {
+// Mixin for basic button styles
+@mixin button-base {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
   font-family: $primary-font;
-  color: $color-white;
-  background-color: $color-black;
-  border-radius: $border-radius - calc($border-radius / 2); // Adjusted border radius for buttons
-  border: 2px solid $color-black;
+  border-radius: $border-radius - calc($border-radius / 2);
+  border: 2px solid;
   transition: filter $transition, background-color $transition, color $transition, box-shadow $transition, transform $transition;
   text-align: center;
   cursor: pointer;
+
+  // Button press effect
   &:active {
-    filter: brightness(120%); // Button press effect
-  }
-  &:focus {
-    outline: none; 
-    box-shadow: $shadow-small; // Custom focus shadow
+    filter: brightness(120%);
+    transform: translateY(1px);
   }
 
-  &.button {
-  
-    &:hover {
-      background-color: $color-white;
-      color: $color-black;
-    }
-  
-    &:active {
-      transform: translateY(1px); // Button press effect
-    }
-  
-    
-  
-    // Danger button style variation
-    &.danger {
-      background-color: $color-danger;
-      border: 2px solid $color-danger;
-  
-      &:hover {
-        background-color: $color-white;
-        color: $color-black;
-      }
-    }
-    
-    // Secondary button variation with gray color
-    &.secondary {
-      background-color: $color-gray-dark;
-      border: 2px solid $color-gray-dark;
-  
-      &:hover {
-        background-color: $color-white;
-        color: $color-black;
-      }
-    }
-  
-    // Outline button variation
-    &.outline {
-      background-color: transparent;
-      color: $color-black;
-      border: 2px solid $color-black;
-  
-      &:hover {
-        background-color: $color-black;
-        color: $color-white;
-      }
-    }
+  &:focus {
+    outline: none; 
+    box-shadow: $shadow-outline;
+  }
+}
+
+// Mixin for hover effect
+@mixin button-hover($bg-color, $text-color) {
+  &:hover {
+    background-color: $bg-color;
+    color: $text-color;
+  }
+}
+
+// Mixin for creating button options
+@mixin button-variant($bg-color, $text-color: $color-white) {
+  background-color: $bg-color;
+  color: $text-color;
+  border-color: $bg-color;
+
+  @include button-hover($color-white, $color-black);
+
+  &.outline {
+    background-color: transparent;
+    color: $bg-color;
+    border-color: $bg-color;
+
+    @include button-hover($bg-color, $text-color);
+  }
+}
+
+// Basic button styles
+.button {
+  @include button-base;
+  @include button-variant($color-black);
+
+  // Button options
+  &.black {
+    @include button-variant($color-black);
+  }
+
+  &.primary {
+    @include button-variant($color-primary);
+  }
+
+  &.secondary {
+    @include button-variant($color-gray-dark);
+  }
+
+  &.danger {
+    @include button-variant($color-danger);
   }
 }

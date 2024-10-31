@@ -30,8 +30,6 @@
     </div>
   </header>
 
-  <!-- Main Layout -->
-  <div class="container layout">
     <!-- Aside: Documentation Menu -->
     <aside>
       <nav>
@@ -62,7 +60,7 @@
     </aside>
 
     <!-- Main Content Section -->
-    <main class="asided">
+    <main class="container layout">
       <section id="overview">
         <h1>Welcome to the Qwaderton Component Library Documentation</h1>
         <p>Select a topic in the sidebar so that nothing happens, as it is not functional at the moment.</p>
@@ -83,15 +81,6 @@
         <input type="password" id="password-input" placeholder="Enter your password" />
         <p></p>
         <p>They have the same style anyway</p>
-        <h3>"Bubble" class Inputs</h3>
-        <label for="text-input">Text Input:</label>
-        <input class="bubble" type="text" id="text-input" placeholder="Enter text" />
-        <br/>
-        <label for="email-input">Email Input:</label>
-        <input class="bubble"type="email" id="email-input" placeholder="Enter your email" />
-        <br/>
-        <label for="password-input">Password Input:</label>
-        <input class="bubble"type="password" id="password-input" placeholder="Enter your password" />
       </section>
 
       <!-- Button Elements -->
@@ -101,16 +90,15 @@
 
         <h2>Buttons</h2>
         
+        <button class="button">Button</button>
         <button class="button primary">Primary Button</button>
         <button class="button secondary">Secondary Button</button>
         <button class="button danger">Danger Button</button>
-
-        <br/>
-        <h3>"Bubble" class Buttons</h3>
-        
-        <button class="button primary bubble">Primary Button</button>
-        <button class="button secondary bubble">Secondary Button</button>
-        <button class="button danger bubble">Danger Button</button>
+        <br>
+        <button class="button outline">Button Outline</button>
+        <button class="button primary outline">Primary Button Outline</button>
+        <button class="button secondary outline" outline>Secondary Button Outline</button>
+        <button class="button danger outline">Danger Button Outline</button>
       </section>
     
       <!-- Select and Radio Elements -->
@@ -157,27 +145,29 @@
       <!-- Table Element -->
       <section id="tables">
         <h2>Table</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Row 1, Cell 1</td>
-              <td>Row 1, Cell 2</td>
-              <td>Row 1, Cell 3</td>
-            </tr>
-            <tr>
-              <td>Row 2, Cell 1</td>
-              <td>Row 2, Cell 2</td>
-              <td>Row 2, Cell 3</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="wrapper">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       
       <!-- Card elements -->
@@ -185,36 +175,39 @@
         <h2>Cards</h2>
         <h3>Default card</h3>
         <article class="card">
-          <div class="card-img">
+          <div class="head">
             <img src="https://images.unsplash.com/photo-1559666126-84f389727b9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=3100&h=2200&dpi=2&fit=crop&crop=entropy" alt="Placeholder Image 4" />
           </div>
-          <div class="card-title">
+          <div class="body">
             <h2>Hello world</h2>
-          </div>
-          <div class="card-content">
-            <p>This is default card</p>
-          </div>
-          <div class="card-actions">
-            <button class="button">
-              Action
-            </button>
+            <p>This is bubble card</p>
+            <div class="actions">
+              <button class="button">
+                Action
+              </button>
+              <button class="button">
+                Action 2
+              </button>
+            </div>
           </div>
         </article>
-        <h3>Bubble card</h3>
-        <article class="card bubble">
-          <div class="card-img">
+      </section>
+        <h3>New card</h3>
+        <article class="card">
+          <div class="head">
             <img src="https://images.unsplash.com/photo-1551509134-2f9d4ec80a9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=3100&h=2200&dpi=2&fit=crop&crop=entropy" alt="Placeholder Image 5" />
           </div>
-          <div class="card-title">
+          <div class="body">
             <h2>Hello world</h2>
-          </div>
-          <div class="card-content">
             <p>This is bubble card</p>
-          </div>
-          <div class="card-actions">
-            <button class="button">
-              Action
-            </button>
+            <div class="actions">
+              <button class="button">
+                Action
+              </button>
+              <button class="button">
+                Action 2
+              </button>
+            </div>
           </div>
         </article>
       </section>
@@ -241,8 +234,6 @@
 
       </section>
     </main>
-  
-  </div>
 
   <!-- Footer Section -->
   <footer class="asided">
