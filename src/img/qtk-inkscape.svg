@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="258.29691mm"
+   height="129.14819mm"
+   viewBox="0 0 258.29691 129.1482"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="qtk.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-intersection-paths="false"
+     inkscape:object-paths="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="true"
+     inkscape:zoom="0.25777842"
+     inkscape:cx="537.28314"
+     inkscape:cy="-155.17203"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.1145819,-14.965672)">
+    <path
+       id="rect1174"
+       style="fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linejoin:round;fill:#1d1d1d"
+       d="M 0,0 V 325.41211 L 162.70703,162.70508 V 0 Z M 162.70703,162.70508 V 325.41211 L 0.00195313,488.11914 H 162.70898 L 325.41406,325.41406 V 162.70703 L 488.11914,0 H 325.41211 Z m 162.70703,162.70898 v 162.70508 h 162.70703 v -0.002 H 650.82812 V 325.41211 l -81.35351,-81.35352 81.35351,-81.35351 V 0 H 488.12109 v 162.70508 0.002 z M 650.82812,162.70508 V 325.41211 L 813.5332,488.11719 H 976.24023 L 732.18164,244.05859 976.24023,0 H 813.5332 Z"
+       transform="matrix(0.26458333,0,0,0.26458333,8.1145819,14.965672)" />
+  </g>
+</svg>

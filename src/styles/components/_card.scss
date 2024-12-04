@@ -1,12 +1,14 @@
 // Default Card Styles
 .card {
+  position: relative;
   background-color: $color-white;
   border: 1px solid $color-gray-light;
   border-radius: $border-radius;
-  padding: 20px;
+  padding: $card-padding;
   box-shadow: $shadow-small; // Regular shadow for default cards
   transition: box-shadow $transition, transform $transition;
   min-width: $card-min-width;
+  max-width: $card-max-width;
 
   &:hover {
     box-shadow: $shadow-medium; // Hover effect with subtle lift
@@ -46,6 +48,41 @@
       }
     }
   }
+
+  &.bg {
+    padding: 0;
+    margin: 0;
+    height: $card-image-max-height;
+    .head {
+        margin-bottom: 0;
+        // height: fit-content;
+      & img {
+        border-radius: $border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .body {
+      padding: $card-padding;
+      position: relative;
+      z-index: 1;
+    }
+
+    // Inversion for dark cards
+    &.inv {
+      .body {
+        * {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+
+
   * {
     margin: 0;
   }
