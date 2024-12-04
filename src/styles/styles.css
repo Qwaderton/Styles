@@ -841,7 +841,7 @@ aside ~ footer {
 .container {
   max-width: 1200px;
   padding: 0 23px;
-  margin: 0 auto;
+  margin: 0 auto 23px auto;
 }
 
 aside {
