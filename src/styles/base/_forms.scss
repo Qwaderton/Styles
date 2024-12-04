@@ -36,6 +36,10 @@ select, input[type="radio"], input[type="checkbox"] {
   border: 2px solid $color-gray-light;
   transition: border-color $transition, box-shadow $transition;
   outline: none; // Remove default browser outline
+  &:focus {
+    outline: none; 
+    box-shadow: $shadow-outline; 
+  }
 }
 
 // Hover and Focus States

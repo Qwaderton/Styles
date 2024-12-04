@@ -1,0 +1,16 @@
+// Basic colors
+$color-primary: #3584e4; // The main color of the brand
+$color-black: #1f1f1f;
+$color-white: #efefef;
+
+// Color Generation
+$color-gray-light: #deddda;
+$color-gray: #9a9996;
+$color-gray-dark: #3d3846;
+
+$color-danger: #c01c28;
+// $color-secondary: ; // Additional color, Archived
+
+$color-background: lighten-color($color-white, 5%);
+$color-text-primary: $color-black;
+$color-text-secondary: $color-gray-dark;

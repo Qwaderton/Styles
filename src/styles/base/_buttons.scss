@@ -61,9 +61,10 @@
     @include button-variant($color-primary);
   }
 
-  &.secondary {
-    @include button-variant($color-gray-dark);
-  }
+  // Archived
+  // &.secondary {
+  //   @include button-variant($color-secondary);
+  // }
 
   &.danger {
     @include button-variant($color-danger);
