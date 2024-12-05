@@ -10,7 +10,7 @@
 @import 'base/buttons';
 @import 'base/forms';
 @import 'base/tables';
-@import 'base/utilities';
+// @import 'base/utilities'; /// To remove
 
 // Layout styles
 @import 'layout/grid';
@@ -36,8 +36,13 @@
 // Utility styles
 @import 'utilities/burger';
 @import 'utilities/helpers';
-@import 'utilities/responsive';
 @import 'utilities/animations';
+
+
+// Responsive styles
+@import "responsive/respinsive-etc";
+@import 'responsive/responsive-header';
+@import 'responsive/responsive-menu';
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');

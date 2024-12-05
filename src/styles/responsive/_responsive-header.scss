@@ -1,0 +1,21 @@
+@media (max-width: $breakpoint-tablet) {
+    header {
+        width: 100%;
+        position: fixed;
+        padding: 0;
+        .container {
+        margin: 0;
+    }
+
+    height: $header-height-mobile;
+        .logo {
+        img {
+            height: $header-height-mobile - $container-padding-mobile;
+        margin: math.div($container-padding-mobile, 2);
+    }
+
+    height: $header-height-mobile;
+        width: auto;
+}
+    }
+}

@@ -1,0 +1,18 @@
+@media (max-width: $breakpoint-tablet) {
+    aside {
+        top: $header-height-mobile;
+        height: 100%;
+        position: fixed;
+    }
+
+    body {
+        max-width: none;
+        min-width: 100dvw;
+        width: fit-content;
+    }
+
+    main {
+        padding-top: $header-height-mobile + $container-padding-mobile !important;
+    }
+}
+  

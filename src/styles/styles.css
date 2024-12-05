@@ -807,6 +807,7 @@ header nav a:hover {
 
 main {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 23px;
   padding-top: 111px !important;
@@ -1040,6 +1041,22 @@ aside nav ul li a.active::before {
 }
 
 @media (max-width: 768px) {
+  aside {
+    top: 44px;
+    height: 100%;
+    position: fixed;
+  }
+  body {
+    max-width: none;
+    min-width: 100dvw;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main {
+    padding-top: 56px !important;
+  }
+}
+@media (max-width: 768px) {
   header {
     width: 100%;
     position: fixed;
@@ -1057,7 +1074,9 @@ aside nav ul li a.active::before {
     height: 32px;
     margin: 6px;
   }
-  header #qtk_menu {
+}
+@media (max-width: 768px) {
+  #qtk_menu {
     display: flex;
     position: fixed;
     top: 0;
@@ -1072,30 +1091,16 @@ aside nav ul li a.active::before {
     gap: 23px;
     transition: left 0.3s ease;
   }
-  header #qtk_menu a {
+  #qtk_menu a {
     font-size: 2em;
     margin-right: 52px;
   }
-  header #qtk_menu.active {
+  #qtk_menu.active {
     left: 0;
   }
-  header #qtk_burger {
+  #qtk_burger {
     display: flex;
     margin: 12px;
-  }
-  aside {
-    top: 44px;
-    height: 100%;
-    position: fixed;
-  }
-  body {
-    max-width: none;
-    min-width: 100dvw;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  main {
-    padding-top: 56px !important;
   }
 }
 *,
