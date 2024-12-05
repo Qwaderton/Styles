@@ -3,4 +3,6 @@ main {
   flex-direction: column;
   gap: $spacing-medium;
   padding-top: $header-height + $container-padding !important;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
 }

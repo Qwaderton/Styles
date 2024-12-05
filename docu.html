@@ -12,16 +12,14 @@
   <!-- Header Section -->
   <header>
     <div class="container">
-      <div id="burger-menu">
-        <span></span><span></span><span></span>
-      </div>
       <div class="logo">
         <a href="index.html">
           <img src="https://qwaderton.github.io/src/img/logo-icon.svg" alt="Project Logo" />
         </a>
       </div>
-      <div id="docu-menu"></div>
-      <nav>
+      <div id="qtk_burger"><span></span></div>
+      <!-- <div id="docu-menu"></div> // To remove -->
+      <nav id="qtk_menu">
         <a href="#overview">Overview</a>
         <a href="#components">Components</a>
         <a href="#customization">Customization</a>
@@ -234,6 +232,22 @@
           print("Hello world!")
         </code>
 
+        <h3>Modal</h3>
+        <button 
+          type="button" 
+          class="button"
+          onclick="modal.showModal()"
+        >
+        Open modal
+        </button>
+
+        <dialog id="modal">
+          <form action="">
+            <button type="submit">Close modal</button>
+          </form>
+          something
+        </dialog>
+
       </section>
     </main>
 
@@ -244,6 +258,6 @@
       <p style="display: flex; justify-content: center;">Built with&nbsp;<a href="https://qwaderton.github.io/Styles"><img src="https://qwaderton.github.io/Styles/src/img/qtk-dark.svg" alt="Qwaderton Component Library" style="height: 25px; border-radius: 0; filter: invert(); object-fit: contain; display: inline-block"></a></p>
     </div>
   </footer>
-<script src="src/js/menu.js"></script>
+<script src="src/scripts/main.js"></script>
 </body>
 </html>

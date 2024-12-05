@@ -4,3 +4,26 @@ aside ~ main {
 aside ~ footer {
   margin-left: $sidebar-width !important;
 }
+
+// Стили для десктопов
+aside {
+  width: $sidebar-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: $color-gray-light;
+  z-index: 1000;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  aside {
+    position:unset;
+    scroll-snap-align: start; // Сайдбар фиксируется при прокрутке
+  }
+
+  main {
+    scroll-snap-align: start; // Основной контент тоже фиксируется
+    min-width: 100vw; // Минимальная ширина контента = ширина экрана
+  }
+}

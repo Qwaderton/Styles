@@ -35,7 +35,8 @@ header {
     // Navigation menu styles
     nav {
       display: flex;
-      gap: 45px; // Space between menu items
+      gap: $spacing-medium; // Space between menu items
+      margin-right: $spacing-medium;
     }
   
     nav a {

@@ -44,7 +44,7 @@ hr {
 
 a {
   color: inherit;
-  transition: color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 a:hover {
   color: #3d3846;
@@ -64,7 +64,7 @@ li {
   font-family: "Raleway", sans-serif;
   border-radius: 16px;
   border: 2px solid;
-  transition: filter 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), background-color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), box-shadow 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), transform 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: filter 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), background-color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), transform 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
   text-align: center;
   cursor: pointer;
   background-color: #1f1f1f;
@@ -158,7 +158,7 @@ input[type=text], input[type=email], input[type=password] {
   border: 2px solid #1f1f1f;
   text-align: center;
   background-color: #f6f5f4;
-  transition: box-shadow 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
   outline: none;
@@ -179,7 +179,7 @@ select, input[type=radio], input[type=checkbox] {
   margin: 10px 0;
   border-radius: 16px;
   border: 2px solid #efefef;
-  transition: border-color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), box-shadow 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: border-color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
   outline: none;
 }
 select:focus, input[type=radio]:focus, input[type=checkbox]:focus {
@@ -199,7 +199,7 @@ select {
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
-  transition: all 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: all 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"%3E%3Cpath d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: right 12px center;
@@ -264,7 +264,7 @@ input[type=checkbox]:checked {
   font-size: 0.875rem;
 }
 .wrapper .table tbody tr {
-  transition: 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
   border-bottom: 1px solid #9a9996;
 }
 .wrapper .table tbody tr:hover {
@@ -652,15 +652,15 @@ input[type=checkbox]:checked {
 }
 .col.align-self-start {
   align-self: flex-start;
-  transition: 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 .col.align-self-center {
   align-self: center;
-  transition: 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 .col.align-self-end {
   align-self: flex-end;
-  transition: 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 
 .row {
@@ -785,7 +785,8 @@ header .container {
 }
 header nav {
   display: flex;
-  gap: 45px;
+  gap: 23px;
+  margin-right: 23px;
 }
 header nav a {
   text-decoration: none;
@@ -798,7 +799,7 @@ header nav a {
   background-size: 0% 1px;
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  transition: background-size 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: background-size 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 header nav a:hover {
   background-size: 100% 1px;
@@ -809,6 +810,8 @@ main {
   flex-direction: column;
   gap: 23px;
   padding-top: 111px !important;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
 }
 
 footer {
@@ -820,7 +823,7 @@ footer {
 footer a {
   color: #f6f5f4;
   text-decoration: underline;
-  transition: color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 footer a:hover {
   color: #efefef;
@@ -838,6 +841,26 @@ aside ~ footer {
   margin-left: 250px !important;
 }
 
+aside {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #efefef;
+  z-index: 1000;
+}
+
+@media (max-width: 576px) {
+  aside {
+    position: unset;
+    scroll-snap-align: start;
+  }
+  main {
+    scroll-snap-align: start;
+    min-width: 100vw;
+  }
+}
 .container {
   max-width: 1200px;
   padding: 0 23px;
@@ -878,7 +901,7 @@ aside nav ul li a {
   color: #3d3846;
   border-radius: 16px;
   background-color: transparent;
-  transition: background-color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: background-color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
   position: relative;
 }
 aside nav ul li a::before {
@@ -891,7 +914,7 @@ aside nav ul li a::before {
   width: 8px;
   border-radius: 50%;
   background-color: transparent;
-  transition: background-color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: background-color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
 aside nav ul li a:hover {
   background-color: #efefef;
@@ -916,7 +939,7 @@ aside nav ul li a.active::before {
   border-radius: 32px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), transform 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  transition: box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), transform 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
   min-width: 250px;
   max-width: 500px;
 }
@@ -977,10 +1000,103 @@ aside nav ul li a.active::before {
   margin: 0;
 }
 
-#burger-menu {
+#qtk_menu {
+  display: flex;
+  gap: 23px;
+}
+
+#qtk_burger {
+  width: 24px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 33px;
+  z-index: 1000;
   display: none;
 }
 
+#qtk_burger::before,
+#qtk_burger::after,
+#qtk_burger span {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#qtk_burger::before {
+  top: 0;
+}
+
+#qtk_burger span {
+  top: 8px;
+}
+
+#qtk_burger::after {
+  bottom: 0;
+}
+
+.burger-active #qtk_burger::before {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger-active #qtk_burger span {
+  opacity: 0;
+}
+.burger-active #qtk_burger::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0;
+    height: 44px;
+  }
+  header .container {
+    margin: 0;
+  }
+  header .logo {
+    height: 44px;
+    width: auto;
+  }
+  header .logo img {
+    height: 32px;
+    margin: 6px;
+  }
+  header #qtk_menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100dvw;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+    background-color: #f6f5f4;
+    gap: 23px;
+    transition: left 0.3s ease;
+  }
+  header #qtk_menu a {
+    font-size: 2em;
+    margin-right: 52px;
+  }
+  header #qtk_menu.active {
+    left: 0;
+  }
+  header #qtk_burger {
+    display: flex;
+    margin: 12px;
+  }
+  main {
+    padding-top: 56px !important;
+  }
+}
 *,
 *::before,
 *::after {

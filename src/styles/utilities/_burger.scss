@@ -1,0 +1,52 @@
+// Basic Styles
+#qtk_burger {
+  width: $burger-width;
+  height: ($burger-height * 3) + ($burger-gap * 2);
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: $spacing-large;
+  z-index: 1000;
+  display: none;
+}
+
+#qtk_burger::before,
+#qtk_burger::after,
+#qtk_burger span {
+  content: '';
+  position: absolute;
+  width: $burger-width;
+  height: $burger-height;
+  background-color: $burger-color;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+// Top line
+#qtk_burger::before {
+  top: 0;
+}
+
+// Middle line
+#qtk_burger span {
+  top: calc(($burger-height + $burger-gap));
+}
+
+// Bottom line
+#qtk_burger::after {
+  bottom: 0;
+}
+
+// Анимация бургер-меню
+.burger-active {
+  & #qtk_burger::before {
+    transform: translateY(calc($burger-gap + $burger-height)) rotate(45deg);
+  }
+  & #qtk_burger span {
+    opacity: 0;
+  }
+  & #qtk_burger::after {
+    transform: translateY(calc(0px - $burger-gap - $burger-height)) rotate(-45deg);
+  }
+}
