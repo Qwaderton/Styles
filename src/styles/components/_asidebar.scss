@@ -3,17 +3,6 @@
 // ------------------------
 // Sidebar styling with fixed position and scroll
 aside {
-  width: $sidebar-width;
-  background-color: $color-white;
-  padding: $container-padding;
-  border-right: 1px solid $color-gray-light;
-  position: fixed;
-  top: $header-height;
-  left: 0;
-  height: calc(100vh - $header-height); // Full height minus header
-  overflow-y: auto; // Scroll if content exceeds height
-  z-index: 999; // Keep sidebar on top
-
   nav {
     ul {
       display: flex;

@@ -843,42 +843,24 @@ aside ~ footer {
 
 aside {
   width: 250px;
+  padding: 23px;
   position: fixed;
-  top: 0;
+  top: 88px;
   left: 0;
   height: 100%;
-  background-color: #efefef;
-  z-index: 1000;
+  z-index: 999;
+  overflow-y: auto;
+  height: calc(100vh - 88px);
+  background-color: #f6f5f4;
+  border-right: 1px solid #efefef;
 }
 
-@media (max-width: 576px) {
-  aside {
-    position: unset;
-    scroll-snap-align: start;
-  }
-  main {
-    scroll-snap-align: start;
-    min-width: 100vw;
-  }
-}
 .container {
   max-width: 1200px;
   padding: 0 23px;
   margin: 0 auto 23px auto;
 }
 
-aside {
-  width: 250px;
-  background-color: #f6f5f4;
-  padding: 23px;
-  border-right: 1px solid #efefef;
-  position: fixed;
-  top: 88px;
-  left: 0;
-  height: calc(100vh - 88px);
-  overflow-y: auto;
-  z-index: 999;
-}
 aside nav ul {
   display: flex;
   flex-direction: column;
@@ -1000,6 +982,12 @@ aside nav ul li a.active::before {
   margin: 0;
 }
 
+.modal-close {
+  font-size: 1.5em;
+  background-color: transparent;
+  border: 0;
+}
+
 #qtk_menu {
   display: flex;
   gap: 23px;
@@ -1053,6 +1041,8 @@ aside nav ul li a.active::before {
 
 @media (max-width: 768px) {
   header {
+    width: 100%;
+    position: fixed;
     padding: 0;
     height: 44px;
   }
@@ -1092,6 +1082,17 @@ aside nav ul li a.active::before {
   header #qtk_burger {
     display: flex;
     margin: 12px;
+  }
+  aside {
+    top: 44px;
+    height: 100%;
+    position: fixed;
+  }
+  body {
+    max-width: none;
+    min-width: 100dvw;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   main {
     padding-top: 56px !important;

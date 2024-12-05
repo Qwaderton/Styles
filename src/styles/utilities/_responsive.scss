@@ -2,6 +2,8 @@
 
 @media (max-width: $breakpoint-tablet) {
   header {
+    width: 100%;
+    position: fixed;
     padding: 0;
     .container {
       margin: 0;
@@ -43,8 +45,20 @@
       margin: $container-padding-mobile;
     }
   }
-  
+
+  aside {
+    top: $header-height-mobile;
+    height: 100%; // Full height minus header
+    position: fixed;
+  }
+
+  body {
+    max-width: none;
+    min-width: 100dvw;
+    width: fit-content;
+  }
+
   main {
     padding-top: $header-height-mobile + $container-padding-mobile !important;
-  }
+  } 
 }
