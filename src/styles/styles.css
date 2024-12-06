@@ -147,7 +147,7 @@ li {
   color: #f6f5f4;
 }
 
-input[type=text], input[type=email], input[type=password] {
+input {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
@@ -160,14 +160,14 @@ input[type=text], input[type=email], input[type=password] {
   background-color: #f6f5f4;
   transition: box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+input:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
-input[type=text]:not(:-moz-placeholder-shown), input[type=email]:not(:-moz-placeholder-shown), input[type=password]:not(:-moz-placeholder-shown) {
+input:not(:-moz-placeholder-shown) {
   text-align: left;
 }
-input[type=text]:not(:placeholder-shown), input[type=email]:not(:placeholder-shown), input[type=password]:not(:placeholder-shown) {
+input:not(:placeholder-shown) {
   text-align: left;
 }
 
