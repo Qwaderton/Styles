@@ -1003,7 +1003,7 @@ aside nav ul li a.active::before {
   border: none;
   cursor: pointer;
   margin: 33px;
-  z-index: 1000;
+  z-index: 1002;
   display: none;
 }
 
@@ -1038,6 +1038,45 @@ aside nav ul li a.active::before {
 }
 .burger-active #qtk_burger::after {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+#qtk_sidebar_switcher {
+  display: none;
+  margin: 0 7px;
+  height: 26px;
+  width: 26px;
+  border-radius: 4px;
+  border: 2px solid #1f1f1f;
+  cursor: pointer;
+}
+#qtk_sidebar_switcher::after {
+  content: "";
+  height: 2px;
+  width: 14px;
+  background-color: #1f1f1f;
+  display: block;
+  position: relative;
+  top: 4px;
+  left: 4px;
+  transition: width 0.3s ease;
+}
+#qtk_sidebar_switcher::before {
+  content: "";
+  height: 2px;
+  width: 10px;
+  background-color: #1f1f1f;
+  display: block;
+  position: relative;
+  top: 13px;
+  left: 4px;
+  transition: width 0.3s ease;
+}
+
+.aside-active #qtk_sidebar_switcher::after {
+  width: 10px;
+}
+.aside-active #qtk_sidebar_switcher::before {
+  width: 14px;
 }
 
 @media (max-width: 768px) {
@@ -1086,7 +1125,7 @@ aside nav ul li a.active::before {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    z-index: 999;
+    z-index: 1001;
     background-color: #f6f5f4;
     gap: 23px;
     transition: left 0.3s ease;
@@ -1101,6 +1140,24 @@ aside nav ul li a.active::before {
   #qtk_burger {
     display: flex;
     margin: 12px;
+  }
+}
+@media (max-width: 768px) {
+  #qtk_sidebar_switcher {
+    display: block;
+  }
+  #qtk_aside {
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 1001;
+    left: -100%;
+    transition: left 0.3s ease;
+  }
+  #qtk_aside.active {
+    left: 0;
+  }
+  aside ~ main {
+    margin-left: 0 !important;
   }
 }
 *,

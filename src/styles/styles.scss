@@ -37,12 +37,14 @@
 @import 'utilities/burger';
 @import 'utilities/helpers';
 @import 'utilities/animations';
+@import 'utilities/sidebar-switcher';
 
 
 // Responsive styles
 @import "responsive/respinsive-etc";
 @import 'responsive/responsive-header';
 @import 'responsive/responsive-menu';
+@import 'responsive/responsive-sidebar';
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
