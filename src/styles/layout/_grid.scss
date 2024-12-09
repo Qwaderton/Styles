@@ -37,41 +37,41 @@ $breakpoints: (
   'desktop': $breakpoint-desktop
 );
 
-// Generate responsive classes for column widths
-@each $width in $widths {
-  @each $break, $breakpoint in $breakpoints {
-    .col-#{$width}-#{$break} {
-      flex: 0 0 #{$width};
-      max-width: #{$width};
-    }
-  }
-}
+// // Generate responsive classes for column widths
+// @each $width in $widths {
+//   @each $break, $breakpoint in $breakpoints {
+//     .col-#{$width}-#{$break} {
+//       flex: 0 0 #{$width};
+//       max-width: #{$width};
+//     }
+//   }
+// }
 
-// Full-width column (applies to .col-100 by default)
-@each $break, $breakpoint in $breakpoints {
-  .col-100-#{$break} {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
+// // Full-width column (applies to .col-100 by default)
+// @each $break, $breakpoint in $breakpoints {
+//   .col-100-#{$break} {
+//     flex: 0 0 100%;
+//     max-width: 100%;
+//   }
+// }
 
-// Responsive offset classes for spacing before columns
-@each $break, $breakpoint in $breakpoints {
-  @each $offset in (0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%) {
-    .offset-#{$offset}-#{$break} {
-      margin-left: #{$offset};
-    }
-  }
-}
+// // Responsive offset classes for spacing before columns
+// @each $break, $breakpoint in $breakpoints {
+//   @each $offset in (0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%) {
+//     .offset-#{$offset}-#{$break} {
+//       margin-left: #{$offset};
+//     }
+//   }
+// }
 
-// Column ordering classes for responsive layouts
-@each $order in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
-  @each $break, $breakpoint in $breakpoints {
-    .order-#{$order}-#{$break} {
-      order: #{$order};
-    }
-  }
-}
+// // Column ordering classes for responsive layouts
+// @each $order in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
+//   @each $break, $breakpoint in $breakpoints {
+//     .order-#{$order}-#{$break} {
+//       order: #{$order};
+//     }
+//   }
+// }
 
 // Flex alignment utilities for horizontal alignment
 .align-start {

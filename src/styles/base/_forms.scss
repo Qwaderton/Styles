@@ -21,6 +21,24 @@ input {
   }
 }
 
+textarea {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: $primary-font;
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: $textarea-border-radius;
+  border: 2px solid $color-black;
+  text-align: left;
+  background-color: $color-white;
+  transition: box-shadow $transition;
+  &:focus {
+    outline: none; 
+    box-shadow: $shadow-outline; 
+  }
+}
+
 // ------------------------
 // Form Elements: Select, Radio, and Checkbox
 // ------------------------

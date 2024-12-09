@@ -171,6 +171,24 @@ input:not(:placeholder-shown) {
   text-align: left;
 }
 
+textarea {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  background-color: #f6f5f4;
+  color: #1f1f1f;
+  border-radius: 16px 16px 0 16px;
+  border: 2px solid #1f1f1f;
+  text-align: left;
+  background-color: #f6f5f4;
+  transition: box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+}
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
 select, input[type=radio], input[type=checkbox] {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -323,315 +341,6 @@ input[type=checkbox]:checked {
   flex: 1 1 0;
   box-sizing: border-box;
   gap: 17px;
-}
-
-.col-20-mobile {
-  flex: 0 0 20;
-  max-width: 20;
-}
-
-.col-20-tablet {
-  flex: 0 0 20;
-  max-width: 20;
-}
-
-.col-20-desktop {
-  flex: 0 0 20;
-  max-width: 20;
-}
-
-.col-25-mobile {
-  flex: 0 0 25;
-  max-width: 25;
-}
-
-.col-25-tablet {
-  flex: 0 0 25;
-  max-width: 25;
-}
-
-.col-25-desktop {
-  flex: 0 0 25;
-  max-width: 25;
-}
-
-.col-33-mobile {
-  flex: 0 0 33;
-  max-width: 33;
-}
-
-.col-33-tablet {
-  flex: 0 0 33;
-  max-width: 33;
-}
-
-.col-33-desktop {
-  flex: 0 0 33;
-  max-width: 33;
-}
-
-.col-40-mobile {
-  flex: 0 0 40;
-  max-width: 40;
-}
-
-.col-40-tablet {
-  flex: 0 0 40;
-  max-width: 40;
-}
-
-.col-40-desktop {
-  flex: 0 0 40;
-  max-width: 40;
-}
-
-.col-50-mobile {
-  flex: 0 0 50;
-  max-width: 50;
-}
-
-.col-50-tablet {
-  flex: 0 0 50;
-  max-width: 50;
-}
-
-.col-50-desktop {
-  flex: 0 0 50;
-  max-width: 50;
-}
-
-.col-60-mobile {
-  flex: 0 0 60;
-  max-width: 60;
-}
-
-.col-60-tablet {
-  flex: 0 0 60;
-  max-width: 60;
-}
-
-.col-60-desktop {
-  flex: 0 0 60;
-  max-width: 60;
-}
-
-.col-66-mobile {
-  flex: 0 0 66;
-  max-width: 66;
-}
-
-.col-66-tablet {
-  flex: 0 0 66;
-  max-width: 66;
-}
-
-.col-66-desktop {
-  flex: 0 0 66;
-  max-width: 66;
-}
-
-.col-75-mobile {
-  flex: 0 0 75;
-  max-width: 75;
-}
-
-.col-75-tablet {
-  flex: 0 0 75;
-  max-width: 75;
-}
-
-.col-75-desktop {
-  flex: 0 0 75;
-  max-width: 75;
-}
-
-.col-80-mobile {
-  flex: 0 0 80;
-  max-width: 80;
-}
-
-.col-80-tablet {
-  flex: 0 0 80;
-  max-width: 80;
-}
-
-.col-80-desktop {
-  flex: 0 0 80;
-  max-width: 80;
-}
-
-.col-100-mobile {
-  flex: 0 0 100;
-  max-width: 100;
-}
-
-.col-100-tablet {
-  flex: 0 0 100;
-  max-width: 100;
-}
-
-.col-100-desktop {
-  flex: 0 0 100;
-  max-width: 100;
-}
-
-.col-100-mobile {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.col-100-tablet {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.col-100-desktop {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.offset-0-mobile {
-  margin-left: 0;
-}
-
-.offset-0-tablet {
-  margin-left: 0;
-}
-
-.offset-0-desktop {
-  margin-left: 0;
-}
-
-.order-0-mobile {
-  order: 0;
-}
-
-.order-0-tablet {
-  order: 0;
-}
-
-.order-0-desktop {
-  order: 0;
-}
-
-.order-1-mobile {
-  order: 1;
-}
-
-.order-1-tablet {
-  order: 1;
-}
-
-.order-1-desktop {
-  order: 1;
-}
-
-.order-2-mobile {
-  order: 2;
-}
-
-.order-2-tablet {
-  order: 2;
-}
-
-.order-2-desktop {
-  order: 2;
-}
-
-.order-3-mobile {
-  order: 3;
-}
-
-.order-3-tablet {
-  order: 3;
-}
-
-.order-3-desktop {
-  order: 3;
-}
-
-.order-4-mobile {
-  order: 4;
-}
-
-.order-4-tablet {
-  order: 4;
-}
-
-.order-4-desktop {
-  order: 4;
-}
-
-.order-5-mobile {
-  order: 5;
-}
-
-.order-5-tablet {
-  order: 5;
-}
-
-.order-5-desktop {
-  order: 5;
-}
-
-.order-6-mobile {
-  order: 6;
-}
-
-.order-6-tablet {
-  order: 6;
-}
-
-.order-6-desktop {
-  order: 6;
-}
-
-.order-7-mobile {
-  order: 7;
-}
-
-.order-7-tablet {
-  order: 7;
-}
-
-.order-7-desktop {
-  order: 7;
-}
-
-.order-8-mobile {
-  order: 8;
-}
-
-.order-8-tablet {
-  order: 8;
-}
-
-.order-8-desktop {
-  order: 8;
-}
-
-.order-9-mobile {
-  order: 9;
-}
-
-.order-9-tablet {
-  order: 9;
-}
-
-.order-9-desktop {
-  order: 9;
-}
-
-.order-10-mobile {
-  order: 10;
-}
-
-.order-10-tablet {
-  order: 10;
-}
-
-.order-10-desktop {
-  order: 10;
 }
 
 .align-start {
@@ -1098,12 +807,13 @@ aside nav ul li a.active::before {
 @media (max-width: 768px) {
   header {
     width: 100%;
+    height: 44px;
     position: fixed;
     padding: 0;
-    height: 44px;
   }
   header .container {
     margin: 0;
+    max-width: none;
   }
   header .logo {
     height: 44px;
