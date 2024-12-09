@@ -147,7 +147,7 @@ li {
   color: #f6f5f4;
 }
 
-input {
+input, select {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
@@ -160,14 +160,14 @@ input {
   background-color: #f6f5f4;
   transition: box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
-input:focus {
+input:focus, select:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
-input:not(:-moz-placeholder-shown) {
+input:not(:-moz-placeholder-shown), select:not(:-moz-placeholder-shown) {
   text-align: left;
 }
-input:not(:placeholder-shown) {
+input:not(:placeholder-shown), select:not(:placeholder-shown) {
   text-align: left;
 }
 
@@ -189,7 +189,7 @@ textarea:focus {
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
-select, input[type=radio], input[type=checkbox] {
+input[type=radio], input[type=checkbox] {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: #1f1f1f;
@@ -198,16 +198,12 @@ select, input[type=radio], input[type=checkbox] {
   border-radius: 16px;
   border: 2px solid #efefef;
   transition: border-color 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77), box-shadow 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  border-color: #1f1f1f;
   outline: none;
 }
-select:focus, input[type=radio]:focus, input[type=checkbox]:focus {
+input[type=radio]:focus, input[type=checkbox]:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-}
-
-select:focus, input[type=radio]:focus, input[type=checkbox]:focus {
-  border-color: #1f1f1f;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 select {
@@ -222,9 +218,6 @@ select {
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 24px;
-}
-select:hover {
-  border-color: #1f1f1f;
 }
 select:focus {
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);

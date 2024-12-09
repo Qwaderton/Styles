@@ -1,5 +1,5 @@
 // Default text inputs
-input {
+input, select {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
@@ -44,7 +44,7 @@ textarea {
 // ------------------------
 
 // General Styles for Form Inputs
-select, input[type="radio"], input[type="checkbox"] {
+input[type="radio"], input[type="checkbox"] {
   font-family: $primary-font;
   font-size: 1rem;
   color: $color-black;
@@ -53,17 +53,12 @@ select, input[type="radio"], input[type="checkbox"] {
   border-radius: $border-radius - calc($border-radius / 2);
   border: 2px solid $color-gray-light;
   transition: border-color $transition, box-shadow $transition;
+  border-color: $color-black; // Darken border on focus
   outline: none; // Remove default browser outline
   &:focus {
     outline: none; 
     box-shadow: $shadow-outline; 
   }
-}
-
-// Hover and Focus States
-select:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
-  border-color: $color-black; // Darken border on focus
-  box-shadow: $shadow-small; // Custom focus ring
 }
 
 // Select Dropdown
@@ -74,9 +69,9 @@ select {
   cursor: pointer;
   transition: all $transition;
 
-  &:hover {
-    border-color: $color-black;
-  }
+  // &:hover {
+  //   border-color: $color-black;
+  // } // To remoev
   &:focus {
     box-shadow: $shadow-outline;
   }
