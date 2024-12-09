@@ -77,6 +77,8 @@ $card-max-width: 500px;
 $card-padding: 20px;
 $card-elements-gap: 12px;
 
+$select-min-width: 200px;
+
 $select-icon: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"%3E%3Cpath d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/%3E%3C/svg%3E');
 
 $textarea-border-radius: $border-radius - calc($border-radius / 2)

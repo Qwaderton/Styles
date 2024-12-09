@@ -63,7 +63,7 @@ input[type="radio"], input[type="checkbox"] {
 
 // Select Dropdown
 select {
-  width: 100%; // Ensure dropdown fills the width of the container
+  width: $select-min-width + 10px;
   background-color: $color-white;
   appearance: none; // Remove default dropdown arrow (we'll customize it)
   cursor: pointer;
@@ -79,7 +79,7 @@ select {
   // Add custom arrow
   background-image: $select-icon;
   background-repeat: no-repeat;
-  background-position: right 12px center;
+  background-position: right 10px center;
   background-size: 24px;
 }
 
