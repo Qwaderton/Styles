@@ -1,0 +1,13 @@
+// Code blocks
+code {
+  border-left: 4px solid $color-gray-dark;
+  background-color: $color-white;
+  display: block;
+  width: 100%;
+  padding: 0 12px;
+  &.dark {
+    border-left: 4px solid $color-black;
+    background-color: $color-gray-dark;
+    color: $color-gray-light;
+  }
+}

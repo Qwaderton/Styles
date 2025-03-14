@@ -1,0 +1,22 @@
+// Footer styles with centered text
+footer {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 40px 0;
+    text-align: center;
+  
+    a {
+      color: $color-white;
+      text-decoration: underline;
+      transition: color $transition;
+  
+      &:hover {
+        color: $color-gray-light;
+      }
+    }
+  
+    p {
+      margin-bottom: 0;
+      color: $color-gray-light;
+    }
+  }

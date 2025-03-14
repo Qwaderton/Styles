@@ -16,7 +16,7 @@
      transform="translate(-8.1145819,-14.965672)">
     <path
        id="rect1174"
-       style="fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linejoin:round;fill:#1d1d1d"
+       style="fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linejoin:round;fill:#d1d1d1"
        d="M 0,0 V 325.41211 L 162.70703,162.70508 V 0 Z M 162.70703,162.70508 V 325.41211 L 0.00195313,488.11914 H 162.70898 L 325.41406,325.41406 V 162.70703 L 488.11914,0 H 325.41211 Z m 162.70703,162.70898 v 162.70508 h 162.70703 v -0.002 H 650.82812 V 325.41211 l -81.35351,-81.35352 81.35351,-81.35351 V 0 H 488.12109 v 162.70508 0.002 z M 650.82812,162.70508 V 325.41211 L 813.5332,488.11719 H 976.24023 L 732.18164,244.05859 976.24023,0 H 813.5332 Z"
        transform="matrix(0.26458333,0,0,0.26458333,8.1145819,14.965672)" />
   </g>

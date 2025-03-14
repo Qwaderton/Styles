@@ -1,0 +1,74 @@
+@use "sass:math";
+
+// main.scss
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+// Base styles
+@import 'base/typography';
+@import 'base/buttons';
+@import 'base/forms';
+@import 'base/tables';
+// @import 'base/utilities'; /// To remove
+
+// Layout styles
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/container';
+
+// Component styles
+@import 'components/asidebar';
+@import 'components/card';
+@import 'components/modal';
+@import 'components/navbar';
+@import 'components/carousel';
+@import 'components/alert';
+
+// Themes
+
+// @import 'themes/light';
+
+
+// Utility styles
+@import 'utilities/burger';
+@import 'utilities/helpers';
+@import 'utilities/animations';
+@import 'utilities/sidebar-switcher';
+
+
+// Responsive styles
+@import "responsive/respinsive-etc";
+@import 'responsive/responsive-header';
+@import 'responsive/responsive-menu';
+@import 'responsive/responsive-sidebar';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Basic reset for margin, padding, and box-sizing
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; // Smooth scrolling for internal links
+}
+
+// Body styles
+body {
+  font-family: $primary-font;
+  color: $color-black;
+  background-color: $color-gray-light;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  -webkit-font-smoothing: antialiased; // For better text rendering
+  text-rendering: optimizeLegibility; // Enhance text legibility
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; // Ensure content stretches down
+}

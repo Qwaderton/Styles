@@ -1,0 +1,146 @@
+// Main container for the grid system
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  gap: $grid-gap * 2;
+  box-sizing: border-box;
+  max-width: $content-max-width;
+  padding: $container-padding;
+}
+
+.grid-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0 auto;
+  gap: $grid-gap;
+  box-sizing: border-box;
+  max-width: $content-max-width;
+  padding: $container-padding;
+}
+
+// Column base class with padding and responsive margin using variables
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  box-sizing: border-box;
+  gap: $grid-gap;
+}
+
+// Responsive breakpoints
+$breakpoints: (
+  'mobile': $breakpoint-mobile,
+  'tablet': $breakpoint-tablet,
+  'desktop': $breakpoint-desktop
+);
+
+// // Generate responsive classes for column widths
+// @each $width in $widths {
+//   @each $break, $breakpoint in $breakpoints {
+//     .col-#{$width}-#{$break} {
+//       flex: 0 0 #{$width};
+//       max-width: #{$width};
+//     }
+//   }
+// }
+
+// // Full-width column (applies to .col-100 by default)
+// @each $break, $breakpoint in $breakpoints {
+//   .col-100-#{$break} {
+//     flex: 0 0 100%;
+//     max-width: 100%;
+//   }
+// }
+
+// // Responsive offset classes for spacing before columns
+// @each $break, $breakpoint in $breakpoints {
+//   @each $offset in (0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%) {
+//     .offset-#{$offset}-#{$break} {
+//       margin-left: #{$offset};
+//     }
+//   }
+// }
+
+// // Column ordering classes for responsive layouts
+// @each $order in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
+//   @each $break, $breakpoint in $breakpoints {
+//     .order-#{$order}-#{$break} {
+//       order: #{$order};
+//     }
+//   }
+// }
+
+// Flex alignment utilities for horizontal alignment
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+// Alignment and positioning utilities for columns using Flexbox alignment
+.col {
+  // Center the column within the row
+  &.justify-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Custom alignment with variable transition for smooth adjustment
+  &.align-self-start { align-self: flex-start; transition: $transition; }
+  &.align-self-center { align-self: center; transition: $transition; }
+  &.align-self-end { align-self: flex-end; transition: $transition; }
+}
+
+// Main grid row container
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  gap: $grid-gap;
+  box-sizing: border-box;
+  
+  // Vertical and horizontal alignment for row content
+  &.align-items-start { align-items: flex-start; }
+  &.align-items-center { align-items: center; }
+  &.align-items-end { align-items: flex-end; }
+  
+  &.justify-start { justify-content: flex-start; }
+  &.justify-center { justify-content: center; }
+  &.justify-end { justify-content: flex-end; }
+  &.justify-between { justify-content: space-between; }
+  &.justify-around { justify-content: space-around; }
+  &.justify-evenly { justify-content: space-evenly; }
+}
+
+// Responsive row padding and margins
+@each $break, $breakpoint in $breakpoints {
+  .row-padding-#{$break} {
+    padding: $spacing-small;
+    
+    @media (min-width: $breakpoint) {
+      padding: $spacing-large;
+    }
+  }
+
+  .row-margin-#{$break} {
+    margin: $spacing-small 0;
+
+    @media (min-width: $breakpoint) {
+      margin: $spacing-large 0;
+    }
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}

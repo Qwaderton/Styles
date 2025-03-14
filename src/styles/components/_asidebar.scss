@@ -1,0 +1,68 @@
+// ------------------------
+// Aside (Sidebar)
+// ------------------------
+// Sidebar styling with fixed position and scroll
+aside {
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      li {
+        padding: 0;
+
+        strong {
+          font-size: 1.125rem;
+          font-family: $secondary-font;
+          margin-bottom: 10px;
+          color: $color-black;
+        }
+
+        a {
+          display: block;
+          padding: 10px 15px;
+          font-size: 1rem;
+          font-family: $primary-font;
+          color: $color-gray-dark;
+          border-radius: $border-radius - calc($border-radius / 2);
+          background-color: transparent;
+          transition: background-color $transition, color $transition;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            transform: translateY(-50%);
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: background-color $transition; // Hover circle effect
+          }
+
+          &:hover {
+            background-color: $color-gray-light;
+            color: $color-black;
+
+            &::before {
+              background-color: $color-black; // Circle turns black on hover
+            }
+          }
+
+          &.active {
+            background-color: $color-gray-light;
+            font-weight: bold;
+            color: $color-black;
+
+            &::before {
+              background-color: $color-black; // Active state circle stays black
+            }
+          }
+        }
+      }
+    }
+  }
+}

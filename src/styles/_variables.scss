@@ -1,0 +1,87 @@
+// Font families used throughout the site
+$primary-font: "Raleway", sans-serif;
+$secondary-font: "Urbanist", Arial, sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$line-height-base: 1.6; // Line height for readability
+$font-size-small: 0.875rem;
+$font-size-base: 1.375rem; // Base font size for body text
+$font-size-large: 1.75rem;
+$heading-font-size: 2.5rem; // Main heading size
+
+// Functions for creating shades
+@function lighten-color($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function darken-color($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@import 'themes/light';
+
+$spacing-xsmall: 7px;
+$spacing-small: 17px;
+$spacing-medium: 23px;
+$spacing-large: 33px;
+$spacing-xlarge: 52px;
+
+$container-padding: $spacing-medium;
+$container-padding-mobile: 12px; // Reduced padding for mobile screens
+
+$header-height: 88px;
+$header-logo-padding: $spacing-small;
+$header-height-mobile: 44px; // Reduced header height for mobile screens
+
+$sidebar-width: 250px; // Fixed width for the sidebar
+
+$menu-offscrean-position: 100%; // 100% - left, -100% - right
+
+$button-padding: 12px 24px;
+$button-border-radius: 4px;
+$button-font-size: 1rem;
+$border-radius: 32px;
+
+$shadow-small: 0 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.1);
+$shadow-large: 0px 8px 16px rgba(0, 0, 0, 0.2);
+$shadow-outline: 0 0 0 4px rgba(0, 0, 0, 0.1);
+
+$grid-gap: $spacing-small;
+$content-max-width: 1200px; // Max width for main content area
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
+// Burger variables
+$burger-width: 24px;
+$burger-height: 2px;
+$burger-gap: 6px;
+$burger-color: #333;
+
+// Etc
+$hover-opacity: 0.85;
+$focus-outline-color: $color-primary;
+$transition: 0.3s cubic-bezier(0.7, 0.26, 0.6, 0.77); // Smooth transition easing
+$transition-mobile: 0.3s ease;
+
+$widths: 20, 25, 33, 40, 50, 60, 66, 75, 80, 100; // Percentage widths for columns
+
+$card-translate: -6px; // Y-axis translate for card hover effect
+$card-image-max-height: 300px; // Max height for images inside a card
+$card-min-width: 250px;
+$card-max-width: 500px;
+$card-padding: 20px;
+$card-elements-gap: 12px;
+
+$select-min-width: 200px;
+
+$select-icon: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%231f1f1f"%3E%3Cpath d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/%3E%3C/svg%3E');
+
+$textarea-border-radius: $border-radius - calc($border-radius / 2)
+                         $border-radius - calc($border-radius / 2)
+                         0
+                         $border-radius - calc($border-radius / 2);

@@ -1,0 +1,33 @@
+aside ~ main {
+  margin-left: $sidebar-width !important;
+}
+aside ~ footer {
+  margin-left: $sidebar-width !important;
+}
+
+// Стили для десктопов
+aside {
+  width: $sidebar-width;
+  padding: $container-padding;
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  height: 100%;
+  z-index: 999;
+  overflow-y: auto; // Scroll if content exceeds height
+  height: calc(100vh - $header-height); // Full height minus header
+  background-color: $color-white;
+  border-right: 1px solid $color-gray-light;
+}
+
+// @media (max-width: $breakpoint-mobile) {
+//   aside {
+//     position:unset;
+//     scroll-snap-align: start; // Сайдбар фиксируется при прокрутке
+//   }
+
+//   main {
+//     scroll-snap-align: start; // Основной контент тоже фиксируется
+//     min-width: 100vw; // Минимальная ширина контента = ширина экрана
+//   }
+// }

@@ -1,0 +1,89 @@
+// Default Card Styles
+.card {
+  position: relative;
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  border-radius: $border-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-small; // Regular shadow for default cards
+  transition: box-shadow $transition, transform $transition;
+  min-width: $card-min-width;
+  max-width: $card-max-width;
+
+  &:hover {
+    box-shadow: $shadow-medium; // Hover effect with subtle lift
+    transform: translateY($card-translate);
+  }
+
+  .head {
+    margin-bottom: $card-elements-gap;
+    // For images inside cards
+    & img {
+      width: 100%; // Ensures images don't overflow the card
+      height: auto; // Maintain aspect ratio for images within cards
+      max-height: $card-image-max-height; // Height limit
+      object-fit: cover; // Ensures the image fills the area and gets cropped if necessary
+      border-radius: calc($border-radius / 2);
+    }
+    & img.contain {
+      object-fit: contain; // Keeps the whole image visible within the card
+    }
+  }
+  .body {
+    // To remove
+    // .title {
+    //   font-size: 1.5rem;
+    //   margin-bottom: 2px;
+    // }
+    // .content {
+    //   font-size: 1rem;
+    //   color: $color-gray-dark;
+    // }
+    .actions {
+      margin-top: $card-elements-gap;
+      display: flex;
+      gap: $spacing-xsmall;
+      & .button {
+        border-radius: calc($border-radius / 2);
+      }
+    }
+  }
+
+  &.bg {
+    padding: 0;
+    margin: 0;
+    height: $card-image-max-height;
+    .head {
+        margin-bottom: 0;
+        // height: fit-content;
+      & img {
+        border-radius: $border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .body {
+      padding: $card-padding;
+      position: relative;
+      z-index: 1;
+    }
+
+    // Inversion for dark cards
+    &.inv {
+      .body {
+        * {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+
+
+  * {
+    margin: 0;
+  }
+}
